@@ -1,1 +1,2 @@
 file5
+This is new line of file5

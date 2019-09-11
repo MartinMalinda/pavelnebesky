@@ -1,1 +1,2 @@
 file3
+Even this file was changed
