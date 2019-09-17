@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace TakesLonger
 {
     public class TakesLonger
@@ -10,14 +14,18 @@ namespace TakesLonger
             // Add "always takes longer than" to the StringBuilder (quote) between the words "It" and "you"
             // Using pieces of the quote variable (instead of just redefining the string)
 
-            Console.WriteLine(quote);
-            Console.WriteLine(quote.Substring(10));
-            Console.WriteLine(quote.IndexOf("It"));
-            Console.WriteLine(quote.IndexOf("you"));
+            //Console.WriteLine(quote);
+            //Console.WriteLine(quote.Substring(10));
+            //Console.WriteLine(quote.IndexOf("It"));
+            //Console.WriteLine(quote.IndexOf("you"));
 
-            string fixedQuote = quote.Substring(0, quote.IndexOf("It")+2) + " always takes longer than " + quote.Substring(quote.IndexOf("you"));
+            string fixedQuote = quote.Substring(0, quote.IndexOf("It") + 2) + " always takes longer than " + quote.Substring(quote.IndexOf("you"));
 
-            Console.WriteLine(fixedQuote);
+            StringBuilder fixedQuote2 = new StringBuilder(quote);
+            fixedQuote2.Insert(quote.IndexOf("you"), "always takes longer than ");
+
+            Console.WriteLine("Without StringBuilder: \n" + fixedQuote);
+            Console.WriteLine("\nWith StringBuilder: \n" + fixedQuote2);
         }
     }
 }
