@@ -6,10 +6,10 @@ namespace Fibonacci
     class Program
     {
 
-        static Dictionary<int, int> fibonacciCache = new Dictionary<int, int>();
+        static Dictionary<int, double> fibonacciCache = new Dictionary<int, double>();
 
 
-        public static int CountFibonacci(int n)
+        public static double CountFibonacci(int n)
         {
             if (n <= 1)
             {
