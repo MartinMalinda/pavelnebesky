@@ -35,6 +35,7 @@ namespace Fibonacci
             for (int i = 0; i < n; i++)
             {
                 fibonacciCache.Add(i, CountFibonacci(i));
+                Console.WriteLine("Cache: " + i + " " + fibonacciCache[i]);
             }
         }
 
@@ -47,14 +48,10 @@ namespace Fibonacci
             number = Convert.ToInt32(Console.ReadLine());
 
             CountFibonacciCache(number);
-            Console.WriteLine(CountFibonacci(number));
+            Console.WriteLine();
+            Console.WriteLine("Fibonacci for " + number + " is: " + CountFibonacci(number));
             Console.WriteLine();
 
-            foreach (var item in fibonacciCache)
-            {
-                Console.WriteLine("Cache: " + item.Key + " " + item.Value);
-                
-            }
         }
     }
 }
