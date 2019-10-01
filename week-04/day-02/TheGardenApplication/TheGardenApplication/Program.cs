@@ -21,31 +21,91 @@ namespace TheGardenApplication
             var purple = new Tree("purple");
             var orange = new Tree("orange");
 
-
             flowers.Add(yellow);
             flowers.Add(blue);
             trees.Add(purple);
             trees.Add(orange);
 
-            Console.WriteLine(flowers[0].Absorbance);
-            Console.WriteLine(flowers[0].Color);
-            Console.WriteLine(flowers[0].NeedsWatter);
-            Console.WriteLine(flowers[0].WaterAmount);
-
-            //foreach (var item in flowers)
-            //{
-
-            //}
+            PrintGarden(flowers, trees);
+            WatteringGarden(40, flowers, trees);
+            PrintGarden(flowers, trees);
+            WatteringGarden(70, flowers, trees);
+            PrintGarden(flowers, trees);
 
         }
 
-        //public void WatteringGarden(float amountOfWatter)
-        //{
-        //    foreach (var item in flowers)
-        //    {
+        public static void PrintGarden(List<Flower> flowers, List<Tree> trees)
+        {
+            foreach (var item in flowers)
+            {
+                Console.Write("The " + item.Color + " Flower ");
+                if (item.NeedsWatter)
+                {
+                    Console.Write("needs ");
+                }
+                else
+                {
+                    Console.Write("doesnt need ");
+                }
+                Console.WriteLine("water.");    
+            }
 
-        //    }
-        //}
+            foreach (var item in trees)
+            {
+                Console.Write("The " + item.Color + " Tree ");
+                if (item.NeedsWatter)
+                {
+                    Console.Write("needs ");
+                }
+                else
+                {
+                    Console.Write("doesnt need ");
+                }
+                Console.WriteLine("water.");
+            }
+            Console.WriteLine();
+        }
+
+
+        public static void WatteringGarden(float amountOfWatter, List<Flower> flowers, List<Tree> trees)
+        {
+            Console.WriteLine("Wattering with " + amountOfWatter);
+            int countOfPlantsNeedsWatter = 0;
+            foreach (var item in flowers)
+            {
+                if  (item.NeedsWatter)
+                {
+                    countOfPlantsNeedsWatter++;
+                }
+            }
+
+            foreach (var item in trees)
+            {
+                if (item.NeedsWatter)
+                {
+                    countOfPlantsNeedsWatter++;
+                }
+            }
+
+            for (int i = 0; i < flowers.Count; i++)
+            {
+                if (flowers[i].NeedsWatter)
+                {
+                    flowers[i].PlantWatering(amountOfWatter / countOfPlantsNeedsWatter);
+                }
+   
+            }
+
+            for (int i = 0; i < trees.Count; i++)
+            {
+                if (trees[i].NeedsWatter)
+                {
+                    trees[i].PlantWatering(amountOfWatter / countOfPlantsNeedsWatter);
+                }
+
+            }
+
+        }
 
     }
 }
