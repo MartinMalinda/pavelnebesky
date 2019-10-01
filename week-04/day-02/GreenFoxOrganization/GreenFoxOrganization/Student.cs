@@ -34,13 +34,13 @@ namespace GreenFoxOrganization
         //Student(name, age, gender, previousOrganization) : beside the given parameters, it sets skippedDays to 0
         //Student() : sets name to Jane Doe, age to 30, gender to female, previousOrganization to The School of Life, skippedDays to 0
 
-        public Student() : base("Jane Doe", 30, gender.Female)
+        public Student() : base("Jane Doe", 30, "female")
         {
             previousOrganization = "The School of Life";
             skippedDays = 0;
         }
 
-        public Student(string inputName, int inputAge, gender inputGender, string inputPreviousOrganization) : base(inputName, inputAge, inputGender)
+        public Student(string inputName, int inputAge, string inputGender, string inputPreviousOrganization) : base(inputName, inputAge, inputGender)
         {
             previousOrganization = inputPreviousOrganization;
             skippedDays = 0;
@@ -53,12 +53,12 @@ namespace GreenFoxOrganization
 
         public override void GetGoal()
         {
-            Console.WriteLine("Be a junior software developer.");
+            Console.WriteLine("My goal is: Be a junior software developer.");
         }
 
         public override void Introduce()
         {
-            Console.WriteLine("Hi, I'm " + Name + ", a " + Age + " year old " + Type + " from " + PreviousOrganization + " who skipped " + SkippedDays + " days from the course already.");
+            Console.WriteLine("Hi, I'm " + Name + ", a " + Age + " year old " + Gender + " from " + PreviousOrganization + " who skipped " + SkippedDays + " days from the course already.");
         }
 
         public void SkipDays (int numberOfDays)
