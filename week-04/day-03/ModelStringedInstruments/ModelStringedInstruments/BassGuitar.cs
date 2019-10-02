@@ -34,5 +34,11 @@ namespace Music
         {
             numberOfStrings = inputNumberOfStrings;
         }
+
+        public override void Sound()
+        {
+            Console.WriteLine("Bass Guitar, a " + NumberOfStrings + " - stringed instrument that " + Voice);
+        }
+
     }
 }

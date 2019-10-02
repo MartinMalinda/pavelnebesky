@@ -7,7 +7,7 @@ namespace Music
     public class ElectricGuitar : StringedInstrument
     {
 
-        public string voice = "Twang";
+        public string voice = "twang";
 
         public string Voice
         {
@@ -34,5 +34,11 @@ namespace Music
         {
             numberOfStrings = inputNumberOfStrings;
         }
+
+        public override void Sound()
+        {
+            Console.WriteLine("Electric Guitar, a " + NumberOfStrings + " - stringed instrument that " + Voice + "s");
+        }
+
     }
 }

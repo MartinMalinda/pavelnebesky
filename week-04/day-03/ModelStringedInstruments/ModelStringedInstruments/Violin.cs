@@ -7,7 +7,7 @@ namespace Music
     public class Violin : StringedInstrument
     {
 
-        public string voice = "Screech";
+        public string voice = "screech";
 
         public string Voice
         {
@@ -34,5 +34,11 @@ namespace Music
         {
             numberOfStrings = inputNumberOfStrings;
         }
+
+        public override void Sound()
+        {
+            Console.WriteLine("Violin, a " + NumberOfStrings + " - stringed instrument that " + Voice + "es");
+        }
+
     }
 }
