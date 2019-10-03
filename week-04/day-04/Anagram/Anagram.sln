@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagram", "Anagram\Anagram.csproj", "{AF860444-4A52-4FBE-95A8-AB3902A6A9B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramTest", "AnagramTest\AnagramTest.csproj", "{8FB30C8E-3412-491A-9DC9-DB3E76FA2968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnagramTestFresh", "AnagramTestFresh\AnagramTestFresh.csproj", "{04418AE3-7378-4682-BFED-9128A5EF9037}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF860444-4A52-4FBE-95A8-AB3902A6A9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF860444-4A52-4FBE-95A8-AB3902A6A9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF860444-4A52-4FBE-95A8-AB3902A6A9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF860444-4A52-4FBE-95A8-AB3902A6A9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB30C8E-3412-491A-9DC9-DB3E76FA2968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB30C8E-3412-491A-9DC9-DB3E76FA2968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB30C8E-3412-491A-9DC9-DB3E76FA2968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB30C8E-3412-491A-9DC9-DB3E76FA2968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04418AE3-7378-4682-BFED-9128A5EF9037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04418AE3-7378-4682-BFED-9128A5EF9037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04418AE3-7378-4682-BFED-9128A5EF9037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04418AE3-7378-4682-BFED-9128A5EF9037}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
