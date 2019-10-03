@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MostCommonCharacters", "MostCommonCharacters\MostCommonCharacters.csproj", "{BF1383C7-C2F9-4556-9725-6B9F3FCA7D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLettersTest", "CountLettersTest\CountLettersTest.csproj", "{2258EBFE-D27D-4CF7-9DCE-A7E44238DA59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF1383C7-C2F9-4556-9725-6B9F3FCA7D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1383C7-C2F9-4556-9725-6B9F3FCA7D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1383C7-C2F9-4556-9725-6B9F3FCA7D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1383C7-C2F9-4556-9725-6B9F3FCA7D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2258EBFE-D27D-4CF7-9DCE-A7E44238DA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2258EBFE-D27D-4CF7-9DCE-A7E44238DA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2258EBFE-D27D-4CF7-9DCE-A7E44238DA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2258EBFE-D27D-4CF7-9DCE-A7E44238DA59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
