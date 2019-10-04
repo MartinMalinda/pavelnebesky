@@ -8,6 +8,8 @@ My other repositories:
 
 [Personal webpage repositorum](https://github.com/pavelnebesky/pavelnebesky.github.io)
 
+[Todo-app repository](https://github.com/pavelnebesky/todo-app)
+
 
 
 My class syllabus:
