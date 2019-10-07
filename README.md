@@ -10,6 +10,8 @@ My other repositories:
 
 [Todo-app repository](https://github.com/pavelnebesky/todo-app)
 
+[Wanderer game repository](https://github.com/pavelnebesky/wanderer-cs)
+
 
 
 My class syllabus:
