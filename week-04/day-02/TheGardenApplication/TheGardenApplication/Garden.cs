@@ -3,12 +3,24 @@ using System.Collections.Generic;
 
 namespace TheGardenApplication
 {
+
+
+
     static class Garden
     {
 
-        public static void PrintGarden(List<Flower> flowers, List<Tree> trees)
+        //public static List<Flower> flowers = new List<Flower>();
+
+        public static List<Flower> Flowers {get; set; }
+        public static List<Tree> Trees { get; set;}
+
+
+        //public static Add()
+
+
+        public static void PrintGarden()
         {
-            foreach (var item in flowers)
+            foreach (var item in Flowers)
             {
                 Console.Write("The " + item.Color + " Flower ");
                 if (item.NeedsWatter)
@@ -22,7 +34,7 @@ namespace TheGardenApplication
                 Console.WriteLine("water.");
             }
 
-            foreach (var item in trees)
+            foreach (var item in Trees)
             {
                 Console.Write("The " + item.Color + " Tree ");
                 if (item.NeedsWatter)
@@ -39,11 +51,11 @@ namespace TheGardenApplication
         }
 
 
-        public static void WatteringGarden(float amountOfWatter, List<Flower> flowers, List<Tree> trees)
+        public static void WatteringGarden(float amountOfWatter)
         {
             Console.WriteLine("Wattering with " + amountOfWatter);
             int countOfPlantsNeedsWatter = 0;
-            foreach (var item in flowers)
+            foreach (var item in Flowers)
             {
                 if (item.NeedsWatter)
                 {
@@ -51,7 +63,7 @@ namespace TheGardenApplication
                 }
             }
 
-            foreach (var item in trees)
+            foreach (var item in Trees)
             {
                 if (item.NeedsWatter)
                 {
@@ -59,20 +71,20 @@ namespace TheGardenApplication
                 }
             }
 
-            for (int i = 0; i < flowers.Count; i++)
+            for (int i = 0; i < Flowers.Count; i++)
             {
-                if (flowers[i].NeedsWatter)
+                if (Flowers[i].NeedsWatter)
                 {
-                    flowers[i].PlantWatering(amountOfWatter / countOfPlantsNeedsWatter);
+                    Flowers[i].PlantWatering(amountOfWatter / countOfPlantsNeedsWatter);
                 }
 
             }
 
-            for (int i = 0; i < trees.Count; i++)
+            for (int i = 0; i < Trees.Count; i++)
             {
-                if (trees[i].NeedsWatter)
+                if (Trees[i].NeedsWatter)
                 {
-                    trees[i].PlantWatering(amountOfWatter / countOfPlantsNeedsWatter);
+                    Trees[i].PlantWatering(amountOfWatter / countOfPlantsNeedsWatter);
                 }
 
             }

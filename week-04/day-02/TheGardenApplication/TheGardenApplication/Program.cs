@@ -26,11 +26,16 @@ namespace TheGardenApplication
             trees.Add(purple);
             trees.Add(orange);
 
-            Garden.PrintGarden(flowers, trees);
-            Garden.WatteringGarden(40, flowers, trees);
-            Garden.PrintGarden(flowers, trees);
-            Garden.WatteringGarden(70, flowers, trees);
-            Garden.PrintGarden(flowers, trees);
+            Garden.Flowers = flowers;
+            Garden.Trees = trees;
+
+            Garden.Trees.Add(purple);
+
+            Garden.PrintGarden();
+            Garden.WatteringGarden(40);
+            Garden.PrintGarden();
+            Garden.WatteringGarden(70);
+            Garden.PrintGarden();
 
         }
 
