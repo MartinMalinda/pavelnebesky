@@ -13,6 +13,18 @@ namespace Exercise4
 
             var result = n.Where(n => n*n > 20);
             result.ToList().ForEach(r => Console.WriteLine(r));
+
+            Console.WriteLine();
+
+            var resultQuery = from item in n
+                              where item*item > 20
+                              select item;
+
+            foreach (var item in resultQuery)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
