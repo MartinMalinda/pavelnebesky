@@ -14,7 +14,17 @@ namespace Exercise5
 
            
             n.GroupBy(n => n).ToList().ForEach(r => Console.WriteLine(r.Key + ": " + r.Count()));
-            
+
+            Console.WriteLine();
+
+            var resultQuery = from item in n
+                              group item by item;
+
+            foreach (var item in resultQuery)
+            {
+                Console.WriteLine(item.Key + ": " + item.Count());
+            }
+
 
         }
     }
