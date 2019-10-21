@@ -14,6 +14,17 @@ namespace Exercise2
 
             var result = n.Where(n => n % 2 == 1).Average();
 			Console.WriteLine(result);
-		}
+
+            Console.WriteLine();
+
+            var resultQuery = (from item in n
+                              where item % 2 == 1
+                              select item).Average();
+
+           
+            Console.WriteLine(resultQuery);
+            
+
+        }
     }
 }
