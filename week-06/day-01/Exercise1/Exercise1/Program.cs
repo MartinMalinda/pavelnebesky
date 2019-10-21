@@ -14,8 +14,7 @@ namespace Exercise1
 
             var result = n.Where(n => n % 2 == 0);
             result.ToList().ForEach(r => Console.WriteLine(r));
-
-            
+ 
         }
     }
 }
