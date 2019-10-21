@@ -14,6 +14,18 @@ namespace Exercise3
 
             var result = n.Where(n => n > 0).Select(n => n*n);
 			result.ToList().ForEach(r => Console.WriteLine(r));
-		}
+
+            Console.WriteLine();
+
+            var resultQuery = from item in n
+                              where item > 0
+                              select item*item;
+
+            foreach (var item in resultQuery)
+            {
+                Console.WriteLine(item);
+            }
+       
+        }
     }
 }
