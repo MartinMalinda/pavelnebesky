@@ -13,7 +13,7 @@ namespace Exercise7
             string[] cities = { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
 
 
-            cities.Where(n => (n[0] == 'A' && n[cities.Length-1] == 'I')).ToList().ForEach(r => Console.WriteLine(r));
+            cities.Where(n => (n.StartsWith('A') && n.EndsWith('I'))).ToList().ForEach(r => Console.WriteLine(r));
 
             Console.WriteLine();
 
