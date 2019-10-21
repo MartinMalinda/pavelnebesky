@@ -14,7 +14,18 @@ namespace Exercise1
 
             var result = n.Where(n => n % 2 == 0);
             result.ToList().ForEach(r => Console.WriteLine(r));
- 
+
+            Console.WriteLine();
+
+            var resultQuery = from item in n
+                              where item % 2 == 0
+                              select item;
+
+            foreach (var item in resultQuery)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
