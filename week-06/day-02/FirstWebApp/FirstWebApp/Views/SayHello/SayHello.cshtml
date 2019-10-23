@@ -1,4 +1,4 @@
-﻿@model FirstWebApp.Models.Greeting
+﻿@model FirstWebApp.Models.SayHello
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -8,7 +8,7 @@
 
   <body>
     <p>
-      Hello, @Model.Content
+      Hello, @Model.Hellos.First()
         @
     </p>
   </body>

@@ -12,16 +12,18 @@ namespace FirstWebApp.Controllers
     [Route("web")]
     public class WebController : Controller
     {
+        public static int webCounter;
+
         [HttpGet("greeting")]
-        public IActionResult Greeting()
+        public IActionResult Greeting(string name)
         {
+
+            webCounter++;
             var greeting = new Greeting()
             {
-                Id = 1,
-                Content = "from the model"
+                Id = webCounter,
+                Content = name + "! This site was loaded " + webCounter + " times since last server start."
             };
-
-            ViewData["count"] = greeting.Id;
 
             return View(greeting);
         }

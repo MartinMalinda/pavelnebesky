@@ -13,14 +13,12 @@ namespace FirstWebApp.Models
 
         public long Id { get; set; }
         public string Content { get; set; }
-        public int Counter { get; set; }
-        public static int counter;
+        
 
         public Greeting (int id, string content)
         {
             Id = id;
             Content = content;
-            Counter = counter;
         }
 
         public Greeting()
@@ -28,11 +26,5 @@ namespace FirstWebApp.Models
             
         }
 
-
-        // GET: /<controller>/
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
     }
 }

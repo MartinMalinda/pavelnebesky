@@ -12,17 +12,15 @@ namespace FirstWebApp.Controllers
     [Route("api")]
     public class RestController : Controller
     {
-
-        
-
+        public static int restCounter;
         // GET: /<controller>/
         [Route("greeting")]
         [HttpGet]
         public Greeting Greet(string name)
         {
-            Greeting.counter++;
+            restCounter++;
 
-            Greeting greeting = new Greeting(Greeting.counter,"Hello, "+ name + "!");
+            Greeting greeting = new Greeting(restCounter ,"Hello, "+ name + "!");
 
             return greeting;
         }
