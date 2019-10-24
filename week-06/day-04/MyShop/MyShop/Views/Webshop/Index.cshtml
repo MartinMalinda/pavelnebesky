@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Web Shop Home Page";
+}
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+@foreach (ShopItem item in ViewBag.Items) {
+<tr>
+    <td><div class="name">@item.Name</div></td>
+    <td><div class="description">@item.Description</div></td>
+    <td><div class="price">@item.Price Kč</div></td>
+    <td><div class="quantity">@item.Quantity</div></td>
+</tr>}
+
+</table>

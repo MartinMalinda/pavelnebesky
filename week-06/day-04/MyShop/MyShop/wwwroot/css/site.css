@@ -38,6 +38,7 @@ a {
 form {
     display: flex;
     justify-content: space-between;
+
 }
 
 input {
@@ -49,6 +50,7 @@ input {
     border-color: red;
     font-size: 25px;
     outline: 0;
+    margin-bottom: 30px;
 
 }
 
@@ -59,8 +61,32 @@ button {
     border-radius: 10px;
     color: white;
     font-size: 30px;
+}
 
+table {
+    width: 100%;
+}
 
+th {
+    background-color: cyan;
+    height: 80px;
+    border-color: white;
+    border-width: 1px;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+tr {
+    height: 80px;
+}
+
+.name {
+    font-size:24px;
+}
+
+.price, .quantity {
+    font-size: 30px;
+    text-align: center;
 }
 
 
