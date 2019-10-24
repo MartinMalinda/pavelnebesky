@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - MyShop</title>
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>My Shop</h1>
+            <div id="navbar">
+                <a href="/onlyAvailable">only available</a> 
+                <a href="/cheapestFirst">cheapest first</a>
+                <a href="/containsNike">contains nike</a>
+                <a href="/averageStock">average stock</a>
+                <a href="/mostExpensiveAvailable">most expensive available</a>
+            </div>
+
+
+            <div id="search">
+            Search for:
+            </div>
+
+            <form>
+                <input type="text" placeholder="... something like nike">
+                <button>Search</button>
+            </form>
+       
+        </header>
+    
+        <main>
+            @RenderBody()
+        </main>
+    </body>
+</html>
