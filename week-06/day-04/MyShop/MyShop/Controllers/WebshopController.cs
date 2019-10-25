@@ -19,6 +19,7 @@ namespace MyShop.Controllers
         new ShopItem("Coca cola", "Standard 0.5l coke", 25, 0),
         new ShopItem("Wokin", "Chicken with fried rice and WOKIN sauce", 119, 100),
         new ShopItem("T-skirt", "blue t-skirt with a rider on a bike", 300, 1),
+        new ShopItem("Gold", "Piece of gold", 30000, 0),
         new ShopItem("Glass", "Standard lemonade glass", 80, 25)};
 
 
@@ -69,7 +70,7 @@ namespace MyShop.Controllers
         [Route("mostExpensiveAvailable")]
         public IActionResult MostExpensive()
         {
-            var filteredShopItem = shopItems.OrderByDescending(s => s.Price).First();
+            var filteredShopItem = shopItems.Where(s => s.Quantity > 0).ToList().OrderByDescending(s => s.Price).First();
             List<ShopItem> filteredShopItems = new List<ShopItem>();
             filteredShopItems.Add(filteredShopItem);
             ViewBag.Items = filteredShopItems;
