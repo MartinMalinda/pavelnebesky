@@ -20,6 +20,12 @@ namespace HelloDIProject.Controllers
             this.utilityService = utilityService;
         }
 
+        [Route("")]
+        public IActionResult Useful()
+        {
+            return View();
+        }
+
         // GET: /<controller>/
         [Route("colored")]
         public IActionResult Colored()
@@ -34,6 +40,24 @@ namespace HelloDIProject.Controllers
             return View("email", utilityService.ValidateEmail(email));
 
         }
+
+        [Route("encoder")]
+        public IActionResult Encoder(string text, int number, UtilityService utilityService)
+        {
+
+            return View("encoder", utilityService.Caesar(text,number));
+
+        }
+
+        [Route("decoder")]
+        public IActionResult Decoder(string text, int number, UtilityService utilityService)
+        {
+
+            return View("decoder", utilityService.Caesar(text, -number));
+
+        }
+
+
 
 
     }

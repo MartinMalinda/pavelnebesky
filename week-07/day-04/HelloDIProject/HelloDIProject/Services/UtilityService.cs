@@ -42,6 +42,24 @@ namespace HelloDIProject
             return response;
         }
 
+        public string Caesar(string text, int number)
+        {
+            if (number < 0)
+            {
+                number = number + 26;
+            }
+
+            string result = "";
+
+            foreach (var character in text)
+            {
+                var offset = char.IsUpper(character) ? 'A' : 'a';
+                result += (char)((character + number - offset) % 26 + offset);
+            }
+
+            return result;
+        }
+
     }
 
 }

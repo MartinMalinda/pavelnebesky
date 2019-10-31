@@ -34,7 +34,7 @@ namespace HelloDIProject
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("<a href=\"/useful/email?email=pavel@nebesky.eu\">check email pavel@nebesky.eu</a>");
+                await context.Response.WriteAsync("<a href=\"/useful/\">go to /useful</a>");
 
             });
         }
