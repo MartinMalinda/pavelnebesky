@@ -17,6 +17,9 @@ namespace HelloDIProject
         {
             services.AddTransient<ConsoleLoggerMiddleware>();
             services.AddTransient<Printer>();
+            services.AddTransient<IColor, BlueColor>();
+            services.AddTransient<UtilityService>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,11 +29,13 @@ namespace HelloDIProject
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMiddleware<ConsoleLoggerMiddleware>();
+                app.UseMvc();
             }
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("<a href=\"/useful/email?email=pavel@nebesky.eu\">check email pavel@nebesky.eu</a>");
+
             });
         }
     }

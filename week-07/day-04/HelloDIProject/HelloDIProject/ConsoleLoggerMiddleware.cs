@@ -13,9 +13,11 @@ namespace HelloDIProject
             return next(context);
         }
 
-        public ConsoleLoggerMiddleware(Printer printer)
+        public ConsoleLoggerMiddleware(Printer printer, IColor color)
         {
             printer.Log("Hi. I am lost.");
+            color.PrintColor(printer);
+
         }
     }
 }
