@@ -13,5 +13,11 @@ namespace foxClub.Services
         {
             foxes = new List<Fox>();
         }
+
+        public Fox FindFoxByName (string name)
+        {
+            return foxes.Find(f => f.Name == name);
+        }
+
     }
 }

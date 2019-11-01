@@ -1,0 +1,31 @@
+﻿@using foxClub.Models;
+@model Fox;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>@Model.Name</h1>
+
+<form action="/nutritionstore" method="post">
+    <input type="text" value="@Model.Name" name="name" hidden />
+
+    <label for="food">Food</label>
+    <select id="food" name="food">
+        <option value="pizza">pizza</option>
+        <option value="bread">bread</option>
+        <option value="lasagne">lasagne</option>
+        <option value="svickova">svickova</option>
+  </select>
+
+    <label for="drink">Drink</label>
+    <select id="drink" name="drink">
+        <option value="watter">watter</option>
+        <option value="sprite">sprite</option>
+        <option value="tea">tea</option>
+        <option value="cofee">cofee</option>
+  </select>
+
+    <button>Change</button>
+</form>

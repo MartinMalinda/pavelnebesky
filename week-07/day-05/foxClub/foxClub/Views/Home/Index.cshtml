@@ -8,7 +8,13 @@
 
 <ul>
     <li>
-        <a href="/information">information</a>
+        <a href="/home/?name=@Model.Name">information</a>
+    </li>
+    <li>
+        <a href="/nutritionstore/?name=@Model.Name">nutrition store</a>
+    </li>
+    <li>
+        <a href="/trickcenter/?name=@Model.Name">trick center</a>
     </li>
 </ul>
 <img src="/assets/greenfox.png" />
@@ -17,17 +23,13 @@ This is @Model.Name. Currently living on
 
 @if ((Model.food == "") && (Model.drink == ""))
     {
-            @Html.Raw("nothing.");
+            @Html.Raw("nothing");
     }
     else
     {
-   
-            @Model.food <p> and </p>
-            @Model.drink
+            @Model.food @Html.Raw(" and ") @Model.drink
   
-    }
-
-    He / She knows @Model.tricks.Count() tricks.
+    }. He / She knows @Model.tricks.Count() tricks.
 <h1>Known tricks</h1>
 
 @if (Model.tricks.Count()==0)

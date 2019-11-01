@@ -25,9 +25,11 @@ namespace foxClub.Controllers
         //[Route("home")]
         public IActionResult Index(string name)
         {
-            Fox selectedFox = foxServices.foxes.Find(f => f.Name == name);
-
-            return View(selectedFox);
+            if (name == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            return View(foxServices.FindFoxByName(name));
         }
 
         [Route("login")]
@@ -44,6 +46,29 @@ namespace foxClub.Controllers
             foxServices.foxes.Add(new Fox(name));
             //Response.Redirect("/?name="+name);
             return RedirectToAction("Index", "Home", new { name = name }); //anonymous object
+        }
+
+        [Route("nutritionstore")]
+
+        public IActionResult NutritionStore(string name)
+        {
+            return View(foxServices.FindFoxByName(name));
+        }
+
+        [Route("nutritionstore")]
+        [HttpPost]
+        public IActionResult NutritionStore(string name, string food, string drink)
+        {
+            foxServices.FindFoxByName(name).drink = drink;
+            foxServices.FindFoxByName(name).food = food;
+            return RedirectToAction("Index", "Home", new { name = name });
+        }
+
+        [Route("trickcenter")]
+        
+        public IActionResult TrickCenter(string name)
+        {
+            return View(foxServices.FindFoxByName(name));
         }
 
     }
