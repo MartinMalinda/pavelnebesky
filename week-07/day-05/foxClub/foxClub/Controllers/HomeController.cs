@@ -52,6 +52,9 @@ namespace foxClub.Controllers
 
         public IActionResult NutritionStore(string name)
         {
+            ViewBag.foodTypes = foxServices.foodTypes;
+            ViewBag.drinks = foxServices.drinks;
+            
             return View(foxServices.FindFoxByName(name));
         }
 
@@ -65,10 +68,21 @@ namespace foxClub.Controllers
         }
 
         [Route("trickcenter")]
-        
+
         public IActionResult TrickCenter(string name)
         {
+            
+            ViewBag.skills = foxServices.skills;
             return View(foxServices.FindFoxByName(name));
+        }
+
+        [Route("trickcenter")]
+        [HttpPost]
+        public IActionResult TrickCenter(string name, string skill)
+        {
+            foxServices.FindFoxByName(name).tricks.Add(skill);
+          
+            return RedirectToAction("Index", "Home", new { name = name });
         }
 
     }

@@ -10,7 +10,7 @@ namespace foxClub.Models
         public List<string> tricks;
         public string food;
         public string drink;
-
+        
         public Fox(string name)
         {
             Name = name;

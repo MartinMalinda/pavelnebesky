@@ -13,18 +13,19 @@
 
     <label for="food">Food</label>
     <select id="food" name="food">
-        <option value="pizza">pizza</option>
-        <option value="bread">bread</option>
-        <option value="lasagne">lasagne</option>
-        <option value="svickova">svickova</option>
+        @foreach (var item in ViewBag.foodTypes)
+        {
+            <option value="@item">@item</option>
+        }
+        
   </select>
 
     <label for="drink">Drink</label>
     <select id="drink" name="drink">
-        <option value="watter">watter</option>
-        <option value="sprite">sprite</option>
-        <option value="tea">tea</option>
-        <option value="cofee">cofee</option>
+         @foreach (var item in ViewBag.drinks)
+        {
+            <option value="@item">@item</option>
+        }
   </select>
 
     <button>Change</button>
